@@ -1,6 +1,6 @@
 export default function AboutRoute() {
   return (
-    <article className="text-rose-400 flex-col text-center">
+    <article className="text-rose-400 flex-col text-center min-h-screen">
       <h3>Here is my me page!</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo atque
