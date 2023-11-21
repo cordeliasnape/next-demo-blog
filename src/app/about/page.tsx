@@ -1,6 +1,6 @@
 export default function AboutRoute() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-[85vh]">
       <section className="bg-indigo-50">
         <h3>This is my page all about me</h3>
         <p>

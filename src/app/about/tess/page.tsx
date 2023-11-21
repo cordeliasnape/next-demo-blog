@@ -1,12 +1,18 @@
 import Link from "next/link";
 
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Gallery of Tess",
+  description: "View this cute gallery of Tess in 3 to 5 working days",
+};
+
 type tessSearchQuery = {
   sortBy: string;
 };
 
 type galleryType = {
   title: string;
-  // image: string;
+  image: string;
   // description: string;
   id: number;
 };
@@ -14,25 +20,25 @@ type galleryType = {
 let pics: galleryType[] = [
   {
     title: "Shake",
-    // image: "https://i.imgur.com/oJhvHnj.jpg",
+    image: "https://i.imgur.com/oJhvHnj.jpg",
     // description: "most photogenic dog",
     id: 0,
   },
   {
     title: "Cute",
-    // image: "https://i.imgur.com/7aZkrxM.jpg",
+    image: "https://i.imgur.com/7aZkrxM.jpg",
     // description: "most photogenic dog",
     id: 1,
   },
   {
     title: "Babushka",
-    // image: "https://i.imgur.com/jNTn6Px.jpg",
+    image: "https://i.imgur.com/jNTn6Px.jpg",
     // description: "most photogenic dog",
     id: 2,
   },
   {
     title: "Goofy",
-    // image: "https://i.imgur.com/HbTDcG1.jpg",
+    image: "https://i.imgur.com/HbTDcG1.jpg",
     // description: "most photogenic dog",
     id: 3,
   },
@@ -62,22 +68,24 @@ export default function AboutRoute({
   }
 
   return (
-    <div>
-      <h3>Click to view these beautiful images of Tess:</h3>
-      <Link href="/about/tess">Clear sort</Link>
-      <br />
-      <Link href="/about/tess?sortBy=asc">Ascending</Link>
-      <br />
-      <Link href="/about/tess?sortBy=desc">Descending</Link>
-      <br />
+    <div className="flex-col justify-center text-center">
+      <div className="bg-black text-white max-w-fit">
+        <h3>Click to view these beautiful images of Tess:</h3>
+        <Link href="/about/tess">Clear sort</Link>
+        <br />
+        <Link href="/about/tess?sortBy=asc">Ascending</Link>
+        <br />
+        <Link href="/about/tess?sortBy=desc">Descending</Link>
+        <br />
+      </div>
 
       {sortedGallery.map((pic) => {
         return (
-          <article className="flex-col text-center" key={pic.id}>
+          <article className="flex-col justify-center" key={pic.id}>
+            {/* <img className="max-w-[10vw]" src={pic.image}></img> */}
             <Link href={`/about/tess/${pic.title.toLowerCase()}`}>
               {pic.title}
             </Link>
-            {/* <img src={pic.image}></img> */}
           </article>
         );
       })}
