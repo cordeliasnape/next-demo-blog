@@ -82,9 +82,8 @@ export default function AboutRoute({
       {sortedGallery.map((pic) => {
         return (
           <article className="flex-col justify-center" key={pic.id}>
-            {/* <img className="max-w-[10vw]" src={pic.image}></img> */}
             <Link href={`/about/tess/${pic.title.toLowerCase()}`}>
-              {pic.title}
+              <img className="max-w-[10vw]" src={pic.image}></img>
             </Link>
           </article>
         );

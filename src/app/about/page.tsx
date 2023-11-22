@@ -1,7 +1,9 @@
+import Information from "@/components/Information";
+
 export default function AboutRoute() {
   return (
-    <div className="min-h-[85vh]">
-      <section className="bg-indigo-50">
+    <div className="min-h-[80vh] flex flex-col justify-evenly items-center text-center">
+      <section className="bg-indigo-50 w-[30vw]">
         <h3>This is my page all about me</h3>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
@@ -11,6 +13,7 @@ export default function AboutRoute() {
           tenetur doloribus vero. Quo.
         </p>
       </section>
+      <Information />
     </div>
   );
 }

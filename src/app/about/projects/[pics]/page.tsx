@@ -1,3 +1,4 @@
+import Link from "next/link";
 type tessPic = { params: { pics: string } };
 
 export function generateMetadata({ params }: tessPic) {
@@ -11,9 +12,11 @@ export function generateMetadata({ params }: tessPic) {
 export default function Page({ params }: tessPic) {
   return (
     <div className="min-h-[85vh]">
-      <h2>
+      <h2>this is a dynamic page for an image entitled "{params.pics}" </h2>
+      <p>
         In just a short while, you'll be able to view these beautful images.
-      </h2>
+      </p>
+      <Link href="/about/tess">Go back</Link>
     </div>
   );
 }

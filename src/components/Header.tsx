@@ -8,7 +8,7 @@ function Header() {
       <div className="flex space-x-4">
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
-        <Link href="/about/tess">Tess</Link>
+        <Link href="/about/projects">Projects</Link>
       </div>
     </header>
   );

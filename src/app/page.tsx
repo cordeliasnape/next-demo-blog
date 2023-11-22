@@ -1,20 +1,65 @@
+import Link from "next/link";
+import Image from "next/image";
+import { Quicksand } from "next/font/google";
+
+const quicksand = Quicksand({ weight: "400", subsets: ["latin"] });
+
 export default function Home() {
   return (
-    <main className="bg-indigo-50 flex min-h-screen flex-col items-center justify-between p-24 text-center ">
-      <div className="rounded-lg border-4 border-amber-300 bg-amber-100 p-6 m-3">
-        <h2 className="text-2xl font-semibold font-mono">
-          Box One Example Header
-        </h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse
-          deleniti, impedit maiores laboriosam, perferendis cupiditate enim quo
-          rerum soluta et odio delectus perspiciatis consectetur atque
-          recusandae, eligendi error? Cumque nemo atque esse accusamus
-          doloribus? Ex, veritatis. Consequatur saepe harum nam? Enim,
-          necessitatibus natus, iste cumque aperiam ullam voluptatem pariatur
-          sed sequi harum numquam eum nam eveniet odit libero vero saepe?
-        </p>
+    <main
+      className={`${quicksand.className} bg-rose-50 flex min-h-screen flex-col  justify-between p-2 text-center`}
+    >
+      <div className="flex h-[110vh]">
+        <div
+          className="text-left flex flex-col justify-center
+        "
+        >
+          <h2>Cordelia Snape</h2>
+          <p>Graduate Full-Stack Web Developer</p>
+        </div>
       </div>
+      <div className="w-[100vw] flex-row">
+        <Image
+          src="/me.jpeg"
+          alt="Image of the Web Developer"
+          width={300}
+          height={300}
+        />
+        <div className="w-[60vw] rounded-lg border-4 border-amber-300 bg-amber-100 p-6 m-3">
+          <h2 className="text-2xl font-semibold font-mono">
+            Hello, I'm Cordelia.
+          </h2>
+          <br />
+          <p>Film and TV graduate</p>
+          <p>Pasta sauce maker</p>
+          <p>Cheese enjoyer</p>
+          <p>Karaoke legend</p>
+          <br />
+          <Link href="/about"> View my About Page →</Link>
+        </div>
+      </div>
+      <section className="flex justify-evenly my-4">
+        <div className="p-1 w-[22vh]">
+          <p>Currently:</p>
+          <h3 className="text-xl font-bold my-4">Merseyside</h3>
+          <img src="https://placehold.co/200x200" />
+        </div>
+        <div className="p-1 w-[22vh]">
+          <p>Commutable:</p>
+          <h3 className="text-xl font-bold my-4">Chester</h3>
+          <img src="https://placehold.co/200x200" />
+        </div>
+        <div className="p-1 w-[22vh]">
+          <p>Commutable:</p>
+          <h3 className="text-xl font-bold my-4">Liverpool</h3>
+          <img src="https://placehold.co/200x200" />
+        </div>
+        <div className="p-1 w-[22vh]">
+          <p>Future goal:</p>
+          <h3 className="text-xl font-bold my-4">Manchester</h3>
+          <img src="https://placehold.co/200x200" />
+        </div>
+      </section>
       <div className="flex-col items-center justify-center rounded-lg border-4 border-emerald-300 bg-emerald-100 p-6 m-3">
         <h2 className="text-2xl font-semibold font-mono">
           Box Two Example Header
