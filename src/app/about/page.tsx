@@ -1,4 +1,5 @@
 import Information from "@/components/Information";
+// import Quicksand
 
 export default function AboutRoute() {
   return (
