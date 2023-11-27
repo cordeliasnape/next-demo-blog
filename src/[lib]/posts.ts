@@ -38,6 +38,8 @@ export function getPostsBySlug(slug: string) {
   return POSTS.find((post) => post.slug === slug);
 }
 
+// find only returns the first match, not all
+
 export function getCategory() {
   return CATEGORIES;
 }

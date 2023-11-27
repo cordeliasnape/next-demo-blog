@@ -12,7 +12,7 @@ type projectSearchQuery = {
 
 type galleryType = {
   title: string;
-  image: string;
+  image?: string;
   description: string;
   id: number;
 };
@@ -37,8 +37,13 @@ let pics: galleryType[] = [
     id: 2,
   },
   {
-    title: "Salmon Cookies",
+    title: "Cookie Stand",
     image: "https://placehold.co/600x400",
+    description: "Here I will reflect on my achievements in this projects.",
+    id: 0,
+  },
+  {
+    title: "Extra Project",
     description: "Here I will reflect on my achievements in this projects.",
     id: 0,
   },
