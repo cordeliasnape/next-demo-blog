@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Inter, Quicksand } from "next/font/google";
+import { Inter, Quicksand, Merriweather } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const quicksand = Quicksand({ weight: "400", subsets: ["latin"] });
 
-const inter = Inter({ subsets: ["latin"] });
+const merriweather = Merriweather({ weight: "400", subsets: ["latin"] });
 
-// export const quicksand = Quicksand({ weight: ["400"], subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Cordelia's Next Practice",
@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={`${inter.className}`}>
         <Header />
         <main
-          className={`${quicksand.className} flex flex-col justify-between p-2 text-center`}
+          className={`${merriweather.className} flex flex-col justify-between p-2 text-center`}
         >
           {children}
         </main>
